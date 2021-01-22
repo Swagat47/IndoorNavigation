@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.Networking;
 
 [Serializable]
 public class GridData {
@@ -55,10 +56,10 @@ public class NodeController : MonoBehaviour {
         WWWForm form = new WWWForm();
         form.AddField("mapInfo", json);
         form.AddField("mapName", MAP_NAME);
-        WWW www = new WWW(WRITE_DATABASE, form);
+        UnityWebRequest www = UnityWebRequest.Post(WRITE_DATABASE, form);
         yield return www;
-        Debug.Log(www.text);
-        debugText.text = gridDataCollection.nodes.Count + " nodes uploaded.\nResult: " + www.text;
+        Debug.Log(www.downloadHandler.text);
+        debugText.text = gridDataCollection.nodes.Count + " nodes uploaded.\nResult: " + www.downloadHandler.text;
     }
 
     public void LoadMap(){
@@ -69,10 +70,10 @@ public class NodeController : MonoBehaviour {
     IEnumerator ReadFromDatabase() {
         WWWForm form = new WWWForm();
         form.AddField("mapName", MAP_NAME);
-        WWW www = new WWW(READ_DATABASE, form);
+        UnityWebRequest www = UnityWebRequest.Post(READ_DATABASE, form);
         yield return www;
-        string loadedJsonDataString = www.text;
-        print(www.text);
+        string loadedJsonDataString = www.downloadHandler.text;
+        print(www.downloadHandler.text);
         //deserialize json
         gridDataCollection = JsonUtility.FromJson<GridDataCollection>(loadedJsonDataString);
         //display map
