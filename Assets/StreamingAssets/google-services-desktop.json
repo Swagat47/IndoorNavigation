@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "601963734141",
+    "firebase_url": "https://ar-nav-e730f-default-rtdb.firebaseio.com",
+    "project_id": "ar-nav-e730f",
+    "storage_bucket": "ar-nav-e730f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:601963734141:android:6470acc4c875bcefe53d14",
+        "android_client_info": {
+          "package_name": "com.MjMihirCompany.WifiLocalizationAR"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "601963734141-49h2lqdaofaivh85ggoomt02i5oraqbt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.MjMihirCompany.WifiLocalizationAR",
+            "certificate_hash": "e0ac4902406d9f04e31c62a6d0972ed84afa41a5"
+          }
+        },
+        {
+          "client_id": "601963734141-jr9g8dba8ufs44sf415206iischg8lra.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLuZ_gK0o-3hjwJ6tqBk-NgdM_cUUt3ZA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "601963734141-jr9g8dba8ufs44sf415206iischg8lra.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
