@@ -25,6 +25,8 @@ him in locations found inside buildings by projecting a virtual character on top
 such that the user can visualize both the real word and the character guiding him/her to the
 desired location.
 
+![trilateration](https://github.com/Swagat47/IndoorNavigation/blob/master/Progress/4.png)
+
 Goals:
 1. To map the ECE department building, enabling the new admissions to navigate through
 the department without any external help.
